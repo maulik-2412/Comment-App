@@ -1,7 +1,7 @@
 import { AuthResponse, Comment, Notification } from '../types';
 
 class ApiService {
-  private baseURL = process.env.NEXT_PUBLIC_API_URL || '/api';
+  private baseURL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
   private token: string | null = null;
 
   constructor() {
