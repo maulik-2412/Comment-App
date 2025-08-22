@@ -12,7 +12,7 @@ export default registerAs(
     database: process.env.DB_NAME || 'comment_app',
     ssl: {
       rejectUnauthorized: false,
-    }
+    },
     entities: [__dirname + '/../**/*.entity{.ts,.js}'],
     synchronize: process.env.NODE_ENV !== 'production',
     logging: process.env.NODE_ENV === 'development',
