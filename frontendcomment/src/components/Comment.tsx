@@ -17,7 +17,6 @@ export const Comment: React.FC<CommentProps> = ({ comment, onReply, onUpdate }) 
 
   
 
-  // Calculate time left for restoration
   useEffect(() => {
     if (comment.isDeleted && comment.deletedAt && comment.canRestore) {
       const updateTimeLeft = () => {

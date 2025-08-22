@@ -25,7 +25,7 @@ export interface Notification {
   isRead: boolean;
   createdAt: Date;
   comment: Comment;
-  userId: string;         // ✅ Add this
+  userId: string;         
   commentId: string;  
 }
 

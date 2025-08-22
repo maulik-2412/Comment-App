@@ -54,13 +54,11 @@ export class Comment {
   @OneToMany(() => Comment, (comment) => comment.parent)
   replies: Comment[];
 
-  // Helper method to check if comment can be edited
   canEdit(): boolean {
     const fifteenMinutesAgo = new Date(Date.now() - 15 * 60 * 1000);
     return this.createdAt > fifteenMinutesAgo;
   }
 
-  // Helper method to check if comment can be restored
   canRestore(): boolean {
     if (!this.isDeleted || !this.deletedAt) return false;
     const fifteenMinutesAgo = new Date(Date.now() - 15 * 60 * 1000);
